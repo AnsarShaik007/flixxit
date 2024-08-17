@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+/* sidebar css */
+
+.container {
+  display: flex;
+  background-color: black;
+  color: white;
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.menuContainer {
+  flex: 0.5;
+  flex-direction: column;
+  height: 100vh;
+  display: flex;
+  background-color: rgb(24, 23, 23);
+}
+
+/* @media (max-width :1100px) {
+
+  .menuContainer {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    max-width: 250px;
+    left: ${({MenuOpen})=>(setMenu)}
+    transition:0.3s ease-in-out;
+    
+  }
+ } */
+.logo {
+  width: 100%;
+  color: blueviolet;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 16px 0px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 12px;
+}
+
+.close {
+  display: none;
+  @media (max-width: 1100px) {
+    display: block;
+  }
+}
+
+.navText {
+  padding: 12px 0px;
+  text-decoration: none !important;
+  font-size: 20px;
+}
+
+.elements {
+  padding: 4px 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  color: grey;
+  width: 100%;
+  &:hover {
+    background-color: rgb(204, 202, 202);
+  }
+  text-decoration: none !important;
+}
+
+.frame {
+  display: flex;
+  flex-direction: column;
+  flex: 3;
+}
+
+/* navbar css */
+
+.navBarDiv {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 16px 40px;
+  align-items: center;
+  background-color: #181717;
+  color: black;
+  border-radius: 0px 0px 15px 15px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.7px);
+}
+
+.loginButton {
+  display: flex;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  max-width: 100px;
+  align-items: center;
+  border-radius: 10px;
+  padding: 8px 10px;
+  gap: 5px;
+  background-color: transparent;
+  border: solid 1px blueviolet;
+  color: blueviolet;
+}
+
+/* dashboard css */
+
+.banner {
+  width: 95%;
+  margin: 10px;
+  border-radius: 15px;
+  border: solid 1px grey;
+  background-color: #181717;
+  overflow-x: hidden;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
