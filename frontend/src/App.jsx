@@ -6,6 +6,8 @@ import { useState } from "react";
 import Dashboard from "./pages/Dashboard";
 import Search from "./pages/Search";
 import Favourite from "./pages/Favourite";
+import Signup from "./pages/signup/Signup";
+import Login from "./pages/login/Login";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(true);
@@ -15,11 +17,13 @@ function App() {
         <div className="container">
           <Sidebar setMenuOpen={setMenuOpen} />
           <div className="frame">
-            <Navbar />
+            {/* <Navbar /> */}
             <Routes>
               <Route path="/" element={<Dashboard />} />
               <Route path="/search" element={<Search />} />
               <Route path="/favourite" element={<Favourite />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/login" element={<Login />} />
             </Routes>
           </div>
         </div>

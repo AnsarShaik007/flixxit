@@ -5,6 +5,7 @@ import { IoIosCloseCircle } from "react-icons/io";
 import { FaSearch } from "react-icons/fa";
 import { FaBookmark } from "react-icons/fa";
 import { IoIosLogOut } from "react-icons/io";
+import { BsFillSignIntersectionFill } from "react-icons/bs";
 
 import { Link } from "react-router-dom";
 
@@ -28,6 +29,18 @@ const menuItems = [
   },
 
   {
+    link: "/signup",
+    name: "Signup",
+    icon: <BsFillSignIntersectionFill color="white" size={25} />,
+  },
+
+  {
+    link: "/login",
+    name: "Login",
+    icon: <BsFillSignIntersectionFill color="white" size={25} />,
+  },
+
+  {
     link: "/logout",
     name: "Logout",
     icon: <IoIosLogOut color="white" size={25} />,
@@ -39,14 +52,6 @@ const button = [
       console.log("Upload");
     },
     name: "Upload",
-    icon: <IoHome color="white" size={25} />,
-  },
-
-  {
-    func: () => {
-      console.log("LogOut");
-    },
-    name: "Logout",
     icon: <IoHome color="white" size={25} />,
   },
 ];
