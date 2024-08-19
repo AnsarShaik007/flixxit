@@ -56,7 +56,9 @@ function Login() {
               required
             />
             <br />
-            <button onClick={handelSignIn}>Get Started</button>
+            <button className="signbutton" onClick={handelSignIn}>
+              Get Started
+            </button>
           </div>
         </div>
       </div>

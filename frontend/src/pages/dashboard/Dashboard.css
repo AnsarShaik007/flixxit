@@ -1,0 +1,42 @@
+.hero img {
+  margin: 20px;
+  width: 95%;
+  height: 70vh;
+  border-radius: 25px;
+  filter: brightness(50%);
+}
+
+.playbutton {
+  padding: 4px 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.infobutton {
+  background-color: black;
+  color: white;
+  padding: 4px 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.dashbuttons {
+  display: flex;
+  margin-top: 20px;
+
+  gap: 1rem;
+}
+
+.dashcontainer {
+  position: absolute;
+  bottom: 10rem;
+  margin-left: 25px;
+}
+
+.movieLogo {
+  font-size: 5vw;
+  font-family: "Times New Roman", Times, serif;
+}

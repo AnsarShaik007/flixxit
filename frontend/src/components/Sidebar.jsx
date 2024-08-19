@@ -7,7 +7,9 @@ import { FaBookmark } from "react-icons/fa";
 import { IoIosLogOut } from "react-icons/io";
 import { BsFillSignIntersectionFill } from "react-icons/bs";
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import { firebaseAuth } from "../utils/firebase-config";
 
 const menuItems = [
   {
@@ -42,20 +44,24 @@ const menuItems = [
 
   {
     link: "/logout",
-    name: "Logout",
+    name: "Nothing",
     icon: <IoIosLogOut color="white" size={25} />,
   },
 ];
 const button = [
   {
     func: () => {
-      console.log("Upload");
+      signOut(firebaseAuth);
     },
-    name: "Upload",
+    name: "Logout",
     icon: <IoHome color="white" size={25} />,
   },
 ];
 function Sidebar() {
+  const navigate = useNavigate();
+  onAuthStateChanged(firebaseAuth, (currentUser) => {
+    if (!currentUser) navigate("/login");
+  });
   return (
     <div className="menuContainer">
       <div className="flex">

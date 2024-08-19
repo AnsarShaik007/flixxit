@@ -58,7 +58,9 @@ function Signup() {
               required
             />
             <br />
-            <button onClick={handelLoginIn}>Sign up</button>
+            <button className="signbutton" onClick={handelLoginIn}>
+              Sign up
+            </button>
           </div>
         </div>
       </div>
